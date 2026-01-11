@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  padding: 30px;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+}
+
+/* FORM */
+.form-card {
+  width: 35%;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+input, textarea, select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button {
+  background: #4f46e5;
+  color: white;
+}
+
+.secondary {
+  background: #64748b;
+}
+
+.download {
+  background: #16a34a;
+}
+
+/* RESUME */
+.resume-card {
+  width: 65%;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  word-wrap: break-word;
+}
+
+.resume-card h1 {
+  margin: 0;
+}
+
+/* TEMPLATE 1 */
+.template1 {
+  color: #1e3a8a;
+}
+
+/* TEMPLATE 2 */
+.template2 {
+  background: #f1f5f9;
+  border-left: 8px solid #6366f1;
+}
+
+/* TEMPLATE 3 */
+.template3 {
+  background: #020617;
+  color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .form-card, .resume-card {
+    width: 100%;
+  }
+}
