@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Resume Builder</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <h1 class="title">Creative Resume Builder</h1>
 
 <div class="container">
@@ -18,9 +11,15 @@
     <input id="email" placeholder="Email">
     <input id="phone" placeholder="Phone">
 
-    <textarea id="skills" placeholder="Skills"></textarea>
+    <textarea id="skills" placeholder="Skills (comma separated)"></textarea>
     <textarea id="education" placeholder="Education"></textarea>
     <textarea id="experience" placeholder="Experience"></textarea>
+    <textarea id="hobbies" placeholder="Hobbies (comma separated)"></textarea>
+
+    <label class="upload">
+      <i class="fa-solid fa-camera"></i> Upload Photo
+      <input type="file" id="photo" accept="image/*" hidden>
+    </label>
 
     <select id="template">
       <option value="template1">Classic</option>
@@ -35,21 +34,31 @@
 
   <!-- RESUME -->
   <div class="resume-card template1" id="resume">
-    <h1 id="r-name">Your Name</h1>
-    <p id="r-contact">Email | Phone</p>
 
-    <h3>Skills</h3>
-    <p id="r-skills"></p>
+    <div class="header">
+      <img id="r-photo" src="" alt="">
+      <div>
+        <h1 id="r-name">Your Name</h1>
+        <p id="r-contact">
+          <i class="fa-solid fa-envelope"></i> Email |
+          <i class="fa-solid fa-phone"></i> Phone
+        </p>
+      </div>
+    </div>
 
-    <h3>Education</h3>
+    <!-- SKILLS (NO TEXT HEADING) -->
+    <div class="icon-section" id="r-skills"></div>
+
+    <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
     <p id="r-education"></p>
 
-    <h3>Experience</h3>
+    <h3><i class="fa-solid fa-briefcase"></i> Experience</h3>
     <p id="r-experience"></p>
-  </div>
 
+    <h3><i class="fa-solid fa-heart"></i> Hobbies</h3>
+    <div class="icon-section" id="r-hobbies"></div>
+
+  </div>
 </div>
 
 <script src="script.js"></script>
-</body>
-</html>
