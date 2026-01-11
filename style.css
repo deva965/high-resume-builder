@@ -4,7 +4,6 @@
 }
 
 body {
-  margin: 0;
   background: linear-gradient(135deg, #6366f1, #ec4899);
   padding: 30px;
 }
@@ -12,7 +11,6 @@ body {
 .title {
   text-align: center;
   color: white;
-  margin-bottom: 20px;
 }
 
 .container {
@@ -20,7 +18,6 @@ body {
   gap: 30px;
 }
 
-/* FORM */
 .form-card {
   width: 35%;
   background: white;
@@ -30,34 +27,34 @@ body {
 
 input, textarea, select {
   width: 100%;
-  margin-bottom: 10px;
   padding: 10px;
+  margin-bottom: 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
+}
+
+.upload {
+  display: block;
+  background: #e5e7eb;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 button {
   width: 100%;
   padding: 10px;
   margin-top: 8px;
-  border: none;
   border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-button {
-  background: #4f46e5;
+  border: none;
   color: white;
+  background: #4f46e5;
+  cursor: pointer;
 }
 
-.secondary {
-  background: #64748b;
-}
-
-.download {
-  background: #16a34a;
-}
+.secondary { background: #64748b; }
+.download { background: #16a34a; }
 
 /* RESUME */
 .resume-card {
@@ -65,31 +62,48 @@ button {
   background: white;
   padding: 30px;
   border-radius: 15px;
-  word-wrap: break-word;
 }
 
-.resume-card h1 {
-  margin: 0;
+.header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
-/* TEMPLATE 1 */
-.template1 {
-  color: #1e3a8a;
+.header img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #ddd;
 }
 
-/* TEMPLATE 2 */
+.icon-section {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
+
+.icon-section span {
+  background: #e0e7ff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* Templates */
 .template2 {
   background: #f1f5f9;
   border-left: 8px solid #6366f1;
 }
 
-/* TEMPLATE 3 */
 .template3 {
   background: #020617;
   color: white;
 }
 
-/* RESPONSIVE */
+/* Responsive */
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
@@ -98,3 +112,7 @@ button {
     width: 100%;
   }
 }
+
+
+
+
