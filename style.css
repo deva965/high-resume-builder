@@ -1,118 +1,17 @@
-* {
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
 }
 
-body {
+.skill-box {
   background: linear-gradient(135deg, #6366f1, #ec4899);
-  padding: 30px;
-}
-
-.title {
-  text-align: center;
   color: white;
-}
-
-.container {
-  display: flex;
-  gap: 30px;
-}
-
-.form-card {
-  width: 35%;
-  background: white;
-  padding: 25px;
-  border-radius: 15px;
-}
-
-input, textarea, select {
-  width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-.upload {
-  display: block;
-  background: #e5e7eb;
-  padding: 10px;
+  border-radius: 8px;
   text-align: center;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 8px;
-  border-radius: 6px;
-  border: none;
-  color: white;
-  background: #4f46e5;
-  cursor: pointer;
-}
-
-.secondary { background: #64748b; }
-.download { background: #16a34a; }
-
-/* RESUME */
-.resume-card {
-  width: 65%;
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-}
-
-.header {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.header img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: #ddd;
-}
-
-.icon-section {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin: 15px 0;
-}
-
-.icon-section span {
-  background: #e0e7ff;
-  padding: 6px 12px;
-  border-radius: 20px;
   font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
-
-/* Templates */
-.template2 {
-  background: #f1f5f9;
-  border-left: 8px solid #6366f1;
-}
-
-.template3 {
-  background: #020617;
-  color: white;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .container {
-    flex-direction: column;
-  }
-  .form-card, .resume-card {
-    width: 100%;
-  }
-}
-
-
-
-
