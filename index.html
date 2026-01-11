@@ -1,4 +1,13 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Creative Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
 <h1 class="title">Creative Resume Builder</h1>
 
 <div class="container">
@@ -16,11 +25,13 @@
     <textarea id="experience" placeholder="Experience"></textarea>
     <textarea id="hobbies" placeholder="Hobbies (comma separated)"></textarea>
 
+    <!-- Photo Upload -->
     <label class="upload">
       <i class="fa-solid fa-camera"></i> Upload Photo
       <input type="file" id="photo" accept="image/*" hidden>
     </label>
 
+    <!-- Template Selector -->
     <select id="template">
       <option value="template1">Classic</option>
       <option value="template2">Modern</option>
@@ -32,9 +43,10 @@
     <button class="download" onclick="downloadResume()">Download PDF</button>
   </div>
 
-  <!-- RESUME -->
+  <!-- RESUME PREVIEW -->
   <div class="resume-card template1" id="resume">
 
+    <!-- Header -->
     <div class="header">
       <img id="r-photo" src="" alt="">
       <div>
@@ -46,21 +58,28 @@
       </div>
     </div>
 
-    <!-- SKILLS (NO TEXT HEADING) -->
+    <!-- Skills -->
     <h3>Skills</h3>
-    <div class="skills-grid" id="r-skills"></div>
+    <p id="r-skills"></p>
 
-
+    <!-- Education -->
     <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
     <p id="r-education"></p>
 
+    <!-- Experience -->
     <h3><i class="fa-solid fa-briefcase"></i> Experience</h3>
     <p id="r-experience"></p>
 
+    <!-- Hobbies -->
     <h3><i class="fa-solid fa-heart"></i> Hobbies</h3>
-    <div class="icon-section" id="r-hobbies"></div>
+    <p id="r-hobbies"></p>
 
   </div>
+
 </div>
 
 <script src="script.js"></script>
+</body>
+</html>
+
+   
