@@ -1,46 +1,29 @@
 function createResume() {
-  r("r-name").innerText = v("name");
-  r("r-contact").innerHTML =
-    `<i class="fa-solid fa-envelope"></i> ${v("email")} |
-     <i class="fa-solid fa-phone"></i> ${v("phone")}`;
+  document.getElementById("r-name").innerText =
+    document.getElementById("name").value;
 
-  r("r-education").innerText = v("education");
-  r("r-experience").innerText = v("experience");
+  document.getElementById("r-contact").innerText =
+    document.getElementById("email").value + " | " +
+    document.getElementById("phone").value;
 
-  createIcons("skills", "r-skills", "fa-solid fa-star");
-  createIcons("hobbies", "r-hobbies", "fa-solid fa-heart");
+  document.getElementById("r-education").innerText =
+    document.getElementById("education").value;
 
-  let resume = r("resume");
-  resume.className = "resume-card " + v("template");
+  document.getElementById("r-experience").innerText =
+    document.getElementById("experience").value;
 
-  let file = document.getElementById("photo").files[0];
-  if (file) {
-    let reader = new FileReader();
-    reader.onload = () => r("r-photo").src = reader.result;
-    reader.readAsDataURL(file);
-  }
-}
+  // SKILLS COLUMN STYLE
+  let skills = document.getElementById("skills").value.split(",");
+  let skillsBox = document.getElementById("r-skills");
+  skillsBox.innerHTML = "";
 
-function createIcons(inputId, outputId, icon) {
-  let items = v(inputId).split(",");
-  let box = r(outputId);
-  box.innerHTML = "";
-  items.forEach(i => {
-    if (i.trim())
-      box.innerHTML += `<span><i class="${icon}"></i> ${i.trim()}</span>`;
+  skills.forEach(skill => {
+    if (skill.trim()) {
+      let div = document.createElement("div");
+      div.className = "skill-box";
+      div.innerText = skill.trim();
+      skillsBox.appendChild(div);
+    }
   });
 }
 
-function resetForm() {
-  document.querySelectorAll("input, textarea").forEach(e => e.value = "");
-  r("r-photo").src = "";
-  r("r-skills").innerHTML = "";
-  r("r-hobbies").innerHTML = "";
-}
-
-function downloadResume() {
-  window.print();
-}
-
-function r(id) { return document.getElementById(id); }
-function v(id) { return document.getElementById(id).value; }
